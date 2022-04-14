@@ -1,0 +1,389 @@
+*{ /* Asterisco selecciona todo basicamente */
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: none; /*Sacar subrayado*/
+    color: rgb(37, 37, 37);
+    font-size: x-large;
+}
+
+/*BODY */
+
+body{
+    background-image: url(./imagenes/fondo.jpg);
+}
+
+main{
+    grid-area: principal;
+    margin-top: 200px;
+    text-align: center;
+    background-color: rgb(157, 166, 179);
+    border: 3px solid grey;
+    padding-bottom: 20px;
+}
+
+
+/* Header */
+header{
+    grid-area: cabecera;
+    display: flex;
+    align-items: flex-end;
+    width: 100vw;
+    justify-content: space-around;
+    background-color:rgba(108, 150, 199, 0.836);
+    position:fixed;
+    z-index: 1;
+}
+
+aside{
+    grid-area: costado;
+    text-align: center;
+    margin-top: 500px;
+    border: 3px solid grey;
+    height: 670px;
+    width: 300px;
+    background-color: rgb(157, 166, 179);
+}
+
+
+footer{
+    grid-area: pie;
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+body{
+    display: grid;
+    grid-template-areas:
+        "cabecera cabecera cabecera cabecera cabecera"
+        ". principal . costado . "
+        "pie pie pie pie pie"
+    ;
+}
+
+
+.cabecera__imagen{
+    height: 100px;
+    display: flex;
+}
+
+.cabecera__barraNavegacion{
+    display: flex;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    
+}
+
+.cabecera__barraNavegacion__lista{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.cabecera__lista__cosos{
+    display: flex;
+    padding-right: 30px;
+    text-align: center;
+}
+
+
+
+/* //////////////////////////////////////////////// */
+
+.imagenes__display{
+    display: grid;
+    overflow-x: scroll;
+    justify-items: center;
+    width: 70vw;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 600px;
+}
+.imagenes__imagen{
+    display: flex;
+    height: 600px;
+    width: 400px;
+    object-fit: cover;
+}
+
+.imagenes__coleccion{
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+.coleccion__fuente{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.logos__chicos{
+    height: 60px;
+}
+
+.cont__videos{
+    display: flex;
+    flex-wrap: wrap;
+    overflow-x: hidden;
+    justify-content: center;
+}
+
+.contacto__directo{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-top: 20px;
+}
+
+.videos{
+    height: 366px;
+    width: 650px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+}
+
+
+.logo__youtube{
+    padding-top: 40px;
+    height:100px;
+}
+
+/* Titulos */
+
+h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif ;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 900;
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+
+h2{
+    font-family: Verdana, Geneva, Tahoma, sans-serif ;
+    text-align: center;
+    margin: 30px;
+    margin-top: 60px;
+}
+
+h3{
+    font-family: Verdana, Geneva, Tahoma, sans-serif ;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Sobre Mi */
+
+.sobreMi{
+    display: flex;
+    justify-content: space-around;
+    overflow-x: hidden;
+    flex-wrap: wrap;
+    padding-top: 50px;
+    width: 98vw;
+}
+
+.fotoMia{
+    display: flex;
+    height: 500px;
+}
+
+.textoSobreMi{
+    width: 50vw;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: larger;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    line-height: 35px;
+    padding-bottom: 70px;
+}
+
+/* /////////////////////////////// */
+
+
+.tabla{
+    width:95vw;
+    display: flex;
+    justify-content: center;
+    font-size: large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+.encargo__consulta{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
+
+
+
+.ult__dibujos{
+    display: inline;
+    height: 300px;
+    width: 200px;
+}
+
+/* FOOTER*/
+
+.footer__lista{
+    background-color:rgba(108, 150, 199, 0.836);
+    width: 100%;
+    text-align: right;
+    list-style: none;
+}
+
+.footer__imagen{
+    display: inline;
+    padding-right: 20px;
+}
+
+.footer__texto{
+    position: absolute;
+    text-align: left;
+    font-family: Verdana, Geneva, Tahoma, sans-serif ;
+    padding-top: 2%;
+    padding-left: 2%;
+}
+
+.footer__imagen__size{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 50px;
+}
+
+
+@media only screen and (max-width: 768px) {
+    aside{
+        margin-top: 100px;
+    }
+
+    .imagenes__display{
+        grid-template-rows: 500px;
+        width: 90vw;
+    }
+
+    .imagenes__imagen{
+        height: 500px;
+    }
+
+    body{
+        display: grid;
+        grid-template-areas:
+            "cabecera cabecera cabecera cabecera cabecera"
+            ". principal principal principal ."
+            ". . costado . ."
+            "pie pie pie pie pie"
+        ;
+    }
+
+
+    .videos{
+        height: 266px;
+        width: 350px;
+        padding-bottom: 10px;
+        padding-right: 10px;
+    }
+    
+    .sobreMi{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .fotoMia{
+        width: 300px;
+        height: 450px;
+    }
+
+}
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #3c77b9 #ffffff00;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 17px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #ffffff00;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #3c77b9;
+    border-radius: 33px;
+    border: 26px outset #ffffff00;
+  }
+
+/* CLASE ANIMATIONS ---- NO PRESTAR ATENCION */
+
+/*   .banner{
+      background-image: linear-gradient(to bottom, black, none);
+      background-image: radial-gradient(red 20%, blue 20%);
+      
+    }
+
+    .titulo{
+        transform: translate(50%, 10%);
+        transform:  rotate(90deg);
+        text-replace: Scale(2,2);
+        transform: skew(20. 50deg);
+        transition: transform 2ms, border 2ms;
+        animation-name: rotarTitulo;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease;
+        animation-duration: 4s;
+        animation-delay: 2s;
+    }
+
+    @keyframes rotarTitulo {
+        0%{
+            transform: rotate(0deg);
+        }
+        25%{
+            transform: rotate(45deg);
+        }
+        50%{
+            transform: rotate(90deg);
+        }
+        75%{
+            transform: rotate(180deg);
+        }
+        100%{
+            transform: rotate(180deg);
+        }
+    }
+
+    .algo li:hover{
+        transform:scale(1.5);
+    }
+
+    .falsoCarrusel{
+        width: 150px;
+        height: 150px;
+        background-image: url("./imagenes/Charly.jpg");
+        animation-name: carrusel;
+        animation-iteration-count: infinite;
+        animation-duration: 20s;
+    }
+
+    @keyframes carrusel {
+        20%{
+            background-image: url("tanto");
+        }
+        from{
+            transform: : rotate(0deg);
+        }
+        to{
+            transform: rotate(360deg);
+        }
+        
+    }
+  */
