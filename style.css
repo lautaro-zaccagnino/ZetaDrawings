@@ -65,7 +65,6 @@ body{
     ;
 }
 
-
 .cabecera__imagen{
     height: 100px;
     display: flex;
@@ -349,8 +348,6 @@ h3{
     border-radius: 33px;
     border: 26px outset #ffffff00;
   }
-
-  /* Cambio */
 
 /* CLASE ANIMATIONS ---- NO PRESTAR ATENCION */
 
