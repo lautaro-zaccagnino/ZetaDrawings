@@ -75,12 +75,12 @@ body{
     display: flex;
     padding-top: 20px;
     padding-bottom: 20px;
-    
 }
 
 .cabecera__barraNavegacion__lista{
     display: flex;
     flex-wrap: wrap;
+    
 }
 
 
@@ -88,6 +88,23 @@ body{
     display: flex;
     padding-right: 30px;
     text-align: center;
+    transition: all 0.4s;
+}
+
+
+.cabecera__lista__cosos a{
+    color: rgb(97, 97, 97);
+    transition: all 0.5s;
+}
+
+.cabecera__lista__cosos:hover{
+    transform: scale(1.2);
+    transition: all 0.4s;
+}
+
+.cabecera__lista__cosos:hover a{
+    color: black;
+    transition: all 1s;
 }
 
 
@@ -107,7 +124,18 @@ body{
     height: 600px;
     width: 400px;
     object-fit: cover;
+    transition: all 0.4s;
 }
+
+.imagenes__imagen:hover{
+    transform: scale(1.15);
+    transition: all 0.4s;
+}
+
+.imagenes__display:hover{
+    height: 670px;
+}
+
 
 .imagenes__coleccion{
     margin-top: 30px;
