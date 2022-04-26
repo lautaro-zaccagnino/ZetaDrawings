@@ -1,11 +1,7 @@
-/* *{ /* Asterisco selecciona todo basicamente 
-    margin: 0;
-    padding: 0;
-} */
 
 a{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    text-decoration: none; /*Sacar subrayado*/
+    text-decoration: none;
     color: rgb(37, 37, 37);
     font-size: x-large;
 }
@@ -32,13 +28,10 @@ main{
 /* Header */
 header{
     grid-area: cabecera;
-    /* display: flex;
-    align-items: flex-start; */
     width: 100vw;
-    /* justify-content: space-around; */
     background-color:rgba(108, 150, 199, 0.836);
     position:fixed;
-    z-index: 1;
+    z-index: 2;
 }
 
 aside{
@@ -72,26 +65,6 @@ body{
     height: 100px;
 }
 
-/*   .cabecera__barraNavegacion{
-    display: flex;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-
- .cabecera__barraNavegacion__lista{
-    display: flex;
-    flex-wrap: wrap;
-    
-}
-
-
- .cabecera__lista__cosos{
-    display: flex;
-    padding-right: 30px;
-    text-align: center;
-    transition: all 0.4s;
-} */
-
 .divisor{
     width: 25vw;
 }
@@ -110,21 +83,6 @@ body{
     color: black;
 }
 
-/*  .cabecera__lista__cosos a{
-    color: rgb(138, 138, 138);
-    transition: all 0.5s;
-}
-
-.cabecera__lista__cosos:hover{
-    transform: scale(1.2);
-    transition: all 0.4s;
-}
-
-.cabecera__lista__cosos:hover a{
-     color: black;
-    transition: all 1s;
-}
-  */
 
 
 /* //////////////////////////////////////////////// */
@@ -143,11 +101,13 @@ body{
     width: 400px;
     object-fit: cover;
     transition: all 0.4s;
+    z-index: 0;
 }
 
 .imagenes__imagen:hover{
     transform: scale(1.15);
     transition: all 0.4s;
+    z-index: 1;
 }
 
 .imagenes__display:hover{
@@ -174,9 +134,7 @@ body{
 .cartas{
     flex-wrap: wrap;
     padding-top:50px;
-    padding-bottom: 70px;/*
-    padding-left:400px;
-    padding-right:400px; */
+    padding-bottom: 70px;
 }
 
 .card{
@@ -209,7 +167,14 @@ body{
 
 .logo__youtube{
     padding-top: 40px;
-    height:100px;
+    padding-bottom: 20px;
+    height:130px;
+    transition: all .5s;
+}
+
+.logo__youtube:hover{
+    transform: scale(1.25);
+    transition: all .5s;
 }
 
 /* Titulos */
@@ -266,15 +231,26 @@ h3{
 
 /* /////////////////////////////// */
 
-
-.tabla{
-    width:95vw;
+.tabla__div{
     display: flex;
     justify-content: center;
-    font-size: large;
+}
+
+.table{
+    border: 2px solid rgb(0, 0, 0);
+    width:300px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+.input-group{
+    width: 300px;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 .encargo__consulta{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -366,6 +342,14 @@ h3{
 }
 
 
+
+
+
+
+
+
+
+
 /* ===== Scrollbar CSS ===== */
   /* Firefox */
   * {
@@ -387,69 +371,3 @@ h3{
     border-radius: 33px;
     border: 26px outset #ffffff00;
   }
-
-/* CLASE ANIMATIONS ---- NO PRESTAR ATENCION */
-
-/*   .banner{
-      background-image: linear-gradient(to bottom, black, none);
-      background-image: radial-gradient(red 20%, blue 20%);
-      
-    }
-
-    .titulo{
-        transform: translate(50%, 10%);
-        transform:  rotate(90deg);
-        text-replace: Scale(2,2);
-        transform: skew(20. 50deg);
-        transition: transform 2ms, border 2ms;
-        animation-name: rotarTitulo;
-        animation-iteration-count: infinite;
-        animation-timing-function: ease;
-        animation-duration: 4s;
-        animation-delay: 2s;
-    }
-
-    @keyframes rotarTitulo {
-        0%{
-            transform: rotate(0deg);
-        }
-        25%{
-            transform: rotate(45deg);
-        }
-        50%{
-            transform: rotate(90deg);
-        }
-        75%{
-            transform: rotate(180deg);
-        }
-        100%{
-            transform: rotate(180deg);
-        }
-    }
-
-    .algo li:hover{
-        transform:scale(1.5);
-    }
-
-    .falsoCarrusel{
-        width: 150px;
-        height: 150px;
-        background-image: url("./imagenes/Charly.jpg");
-        animation-name: carrusel;
-        animation-iteration-count: infinite;
-        animation-duration: 20s;
-    }
-
-    @keyframes carrusel {
-        20%{
-            background-image: url("tanto");
-        }
-        from{
-            transform: : rotate(0deg);
-        }
-        to{
-            transform: rotate(360deg);
-        }
-        
-    }
-  */

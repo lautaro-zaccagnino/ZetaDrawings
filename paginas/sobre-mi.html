@@ -16,22 +16,44 @@
 
 <body>
     
-    <header> <!-- Encabezado, barra busqueda, logo-->
-        <a href="../index.html"><img src="../imagenes/ZD.jpg" alt="Logo Zeta Drawings" class="cabecera__imagen"></a>
-        
-        <nav class="cabecera__barraNavegacion"> <!-- Barra navegacion -->
-            <ul class="cabecera__barraNavegacion__lista"> <!-- Lista Ordenada --><!-- "#" Seniala que es la misma pagina -->
-                <li class="cabecera__lista__cosos"> <a href="../paginas/coleccion.html">Coleccion</a></li>
-                <li class="cabecera__lista__cosos"> <a href="../paginas/youtube.html"> Youtube </a></li>
-                <li class="cabecera__lista__cosos"> <a href="#">Sobre mi</a></li>
-                <li class="cabecera__lista__cosos"> <a href="../paginas/contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
+    <header  class="d-md-flex justify-content-md-center"> <!-- Encabezado, barra busqueda, logo-->
+        <nav class="navbar navbar-expand-md navbar-light">
+            <div class="container-fluid">
+              
+              <div class="d-flex align-self-start">
+                <a class="navbar-brand" href="../index.html"><img src="../imagenes/ZD.jpg" alt="Logo Zeta Drawings" class="cabecera__imagen"></a>
+              </div>
+  
+              <div class="d-none d-md-flex divisor">
+  
+              </div>
+  
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse align-self-md-end" id="navbarNav">
+                  <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="coleccion.html">Coleccion</a>
+                      </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="youtube.html">Youtube</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Sobre mi</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
     </header>
 
     <main>
         <div class="sobreMi">
-            <img src="../imagenes/foto.jpg" alt="Foto del artista" class="fotoMia">
+            <img src="../imagenes/foto.jpg" alt="Foto del artista" class="fotoMia rounded">
     
             <div class="textoSobreMi">
                 <h1>Lautaro Joaquin Zaccagnino</h1>
