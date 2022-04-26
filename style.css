@@ -1,7 +1,7 @@
-*{ /* Asterisco selecciona todo basicamente */
+/* *{ /* Asterisco selecciona todo basicamente 
     margin: 0;
     padding: 0;
-}
+} */
 
 a{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -25,14 +25,17 @@ main{
     padding-bottom: 20px;
 }
 
+#tamanio{
+    width: 70vw;
+}
 
 /* Header */
 header{
     grid-area: cabecera;
-    display: flex;
-    align-items: flex-end;
+    /* display: flex;
+    align-items: flex-start; */
     width: 100vw;
-    justify-content: space-around;
+    /* justify-content: space-around; */
     background-color:rgba(108, 150, 199, 0.836);
     position:fixed;
     z-index: 1;
@@ -44,7 +47,7 @@ aside{
     margin-top: 500px;
     border: 3px solid grey;
     height: 670px;
-    width: 300px;
+    width: 225px;
     background-color: rgb(157, 166, 179);
 }
 
@@ -67,32 +70,48 @@ body{
 
 .cabecera__imagen{
     height: 100px;
-    display: flex;
 }
 
-.cabecera__barraNavegacion{
+/*   .cabecera__barraNavegacion{
     display: flex;
     padding-top: 20px;
     padding-bottom: 20px;
 }
 
-.cabecera__barraNavegacion__lista{
+ .cabecera__barraNavegacion__lista{
     display: flex;
     flex-wrap: wrap;
     
 }
 
 
-.cabecera__lista__cosos{
+ .cabecera__lista__cosos{
     display: flex;
     padding-right: 30px;
     text-align: center;
     transition: all 0.4s;
+} */
+
+.divisor{
+    width: 25vw;
 }
 
+.nav-link{
+    color: rgb(66, 66, 66);
+    transition: all 0.5s;
+}
 
-.cabecera__lista__cosos a{
-    color: rgb(97, 97, 97);
+.nav-item:hover .nav-link{
+    color: rgb(0, 0, 0);
+    transition: all 0.5s;
+}
+
+.navbar-toggler{
+    color: black;
+}
+
+/*  .cabecera__lista__cosos a{
+    color: rgb(138, 138, 138);
     transition: all 0.5s;
 }
 
@@ -102,10 +121,10 @@ body{
 }
 
 .cabecera__lista__cosos:hover a{
-    color: black;
+     color: black;
     transition: all 1s;
 }
-
+  */
 
 
 /* //////////////////////////////////////////////// */
@@ -141,7 +160,7 @@ body{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    overflow-x: hidden;
+    overflow-x: none;
 }
 
 .coleccion__fuente{
@@ -150,6 +169,22 @@ body{
 
 .logos__chicos{
     height: 60px;
+}
+
+.cartas{
+    flex-wrap: wrap;
+    padding-top:50px;
+    padding-bottom: 70px;/*
+    padding-left:400px;
+    padding-right:400px; */
+}
+
+.card{
+    transition: all .5s;
+}
+.card:hover{
+    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.521);
+    transition: all .5s;
 }
 
 .cont__videos{
@@ -194,12 +229,12 @@ h2{
     margin: 30px;
     margin-top: 60px;
 }
-
 h3{
     font-family: Verdana, Geneva, Tahoma, sans-serif ;
     text-align: center;
     margin-top: 10px;
     margin-bottom: 10px;
+    font-size: large;
 }
 
 /* Sobre Mi */
@@ -262,6 +297,7 @@ h3{
     width: 100%;
     text-align: right;
     list-style: none;
+    margin-bottom: 0px;
 }
 
 .footer__imagen{
@@ -285,19 +321,19 @@ h3{
 
 
 @media only screen and (max-width: 768px) {
+    #tamanio{
+        width: 95vw;
+    }
     aside{
         margin-top: 100px;
     }
-
     .imagenes__display{
         grid-template-rows: 500px;
         width: 90vw;
     }
-
     .imagenes__imagen{
         height: 500px;
     }
-
     body{
         display: grid;
         grid-template-areas:
@@ -307,26 +343,29 @@ h3{
             "pie pie pie pie pie"
         ;
     }
-
-
     .videos{
         height: 266px;
         width: 350px;
         padding-bottom: 10px;
         padding-right: 10px;
     }
-    
     .sobreMi{
         flex-direction: column;
         align-items: center;
     }
-
     .fotoMia{
         width: 300px;
         height: 450px;
     }
-
 }
+
+@media only screen and (min-width: 1600px){
+    #tamanio{
+        width: 1120px;
+    }
+}
+
+
 /* ===== Scrollbar CSS ===== */
   /* Firefox */
   * {
