@@ -70,13 +70,27 @@ body{
 }
 
 .nav-link{
-    color: rgb(66, 66, 66);
+    color: rgba(0, 0, 0, 0.349) !important; /* Para sobreescribrir al bootstrap y poder modificar la opacidad y animar la fuente */
     transition: all 0.5s;
 }
 
 .nav-item:hover .nav-link{
-    color: rgb(0, 0, 0);
+    color: rgb(0, 0, 0) !important; /* Para sobreescribrir al bootstrap y poder modificar la opacidad y animar la fuente */
     transition: all 0.5s;
+}
+
+.navbar-nav:hover .active{
+    color: rgba(0, 0, 0, 0.349) !important; /*Animaciones con Nav-link Active*/
+}
+
+
+
+.active{
+    color: rgb(0, 0, 0) !important; /*Reestablecer Color Negro en los Nav-links active's */
+}
+
+.nav-item .active:hover{
+    color: rgb(0, 0, 0) !important; /*Animaciones con Nav-link Active*/
 }
 
 .navbar-toggler{
@@ -102,6 +116,10 @@ body{
     object-fit: cover;
     transition: all 0.4s;
     z-index: 0;
+}
+
+.carousel-item{
+    pointer-events: none;
 }
 
 .imagenes__imagen:hover{
@@ -191,6 +209,7 @@ h1{
 h2{
     font-family: Verdana, Geneva, Tahoma, sans-serif ;
     text-align: center;
+    font-weight: 600;
     margin: 30px;
     margin-top: 60px;
 }
@@ -200,6 +219,7 @@ h3{
     margin-top: 10px;
     margin-bottom: 10px;
     font-size: large;
+    font-weight: 600;
 }
 
 /* Sobre Mi */
@@ -252,6 +272,16 @@ h3{
     align-items: center;
 }
 
+.encargo__contacto{
+    transition: all .5s;
+    color: rgb(95, 95, 95);
+}
+
+.encargo__contacto:hover{
+    color: rgb(0, 0, 0);
+    transition: all .5s;
+}
+
 .encargo__consulta{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     padding-top: 30px;
@@ -264,6 +294,7 @@ h3{
     display: inline;
     height: 300px;
     width: 200px;
+    pointer-events: none;
 }
 
 /* FOOTER*/

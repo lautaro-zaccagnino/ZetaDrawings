@@ -1,0 +1,7 @@
+.formu {
+  color: red; }
+
+.header_contacto .desktop .menudesktop {
+  display: flex; }
+  .header_contacto .desktop .menudesktop li {
+    color: red; }
