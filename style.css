@@ -25,15 +25,6 @@ main{
     width: 70vw;
 }
 
-/* Header */
-header{
-    grid-area: cabecera;
-    width: 100vw;
-    background-color:rgba(108, 150, 199, 0.836);
-    position:fixed;
-    z-index: 2;
-}
-
 aside{
     grid-area: costado;
     text-align: center;
@@ -45,13 +36,6 @@ aside{
 }
 
 
-footer{
-    grid-area: pie;
-    margin-top: 100px;
-    display: flex;
-    justify-content: space-between;
-}
-
 body{
     display: grid;
     grid-template-areas:
@@ -60,44 +44,6 @@ body{
         "pie pie pie pie pie"
     ;
 }
-
-.cabecera__imagen{
-    height: 100px;
-}
-
-.divisor{
-    width: 25vw;
-}
-
-.nav-link{
-    color: rgba(0, 0, 0, 0.349) !important; /* Para sobreescribrir al bootstrap y poder modificar la opacidad y animar la fuente */
-    transition: all 0.5s;
-}
-
-.nav-item:hover .nav-link{
-    color: rgb(0, 0, 0) !important; /* Para sobreescribrir al bootstrap y poder modificar la opacidad y animar la fuente */
-    transition: all 0.5s;
-}
-
-.navbar-nav:hover .active{
-    color: rgba(0, 0, 0, 0.349) !important; /*Animaciones con Nav-link Active*/
-}
-
-
-
-.active{
-    color: rgb(0, 0, 0) !important; /*Reestablecer Color Negro en los Nav-links active's */
-}
-
-.nav-item .active:hover{
-    color: rgb(0, 0, 0) !important; /*Animaciones con Nav-link Active*/
-}
-
-.navbar-toggler{
-    color: black;
-}
-
-
 
 /* //////////////////////////////////////////////// */
 
@@ -251,26 +197,17 @@ h3{
 
 /* /////////////////////////////// */
 
-.tabla__div{
-    display: flex;
-    justify-content: center;
+
+
+
+.ult__dibujos{
+    display: inline;
+    height: 300px;
+    width: 200px;
+    pointer-events: none;
 }
 
-.table{
-    border: 2px solid rgb(0, 0, 0);
-    width:300px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
 
-.input-group{
-    width: 300px;
-}
-
-.info{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
 .encargo__contacto{
     transition: all .5s;
@@ -288,43 +225,7 @@ h3{
     padding-bottom: 40px;
 }
 
-
-
-.ult__dibujos{
-    display: inline;
-    height: 300px;
-    width: 200px;
-    pointer-events: none;
-}
-
 /* FOOTER*/
-
-.footer__lista{
-    background-color:rgba(108, 150, 199, 0.836);
-    width: 100%;
-    text-align: right;
-    list-style: none;
-    margin-bottom: 0px;
-}
-
-.footer__imagen{
-    display: inline;
-    padding-right: 20px;
-}
-
-.footer__texto{
-    position: absolute;
-    text-align: left;
-    font-family: Verdana, Geneva, Tahoma, sans-serif ;
-    padding-top: 2%;
-    padding-left: 2%;
-}
-
-.footer__imagen__size{
-    padding-top: 20px;
-    padding-bottom: 20px;
-    width: 50px;
-}
 
 
 @media only screen and (max-width: 768px) {
@@ -366,16 +267,13 @@ h3{
     }
 }
 
+
+
 @media only screen and (min-width: 1600px){
     #tamanio{
         width: 1120px;
     }
 }
-
-
-
-
-
 
 
 

@@ -1,0 +1,45 @@
+
+/* Header */
+header{
+    grid-area: cabecera;
+    width: 100vw;
+    background-color:$color-principal;
+    position:fixed;
+    z-index: 2;
+}
+
+.cabecera__imagen{
+    height: 100px;
+}
+
+.divisor{
+    width: 25vw;
+}
+
+.nav-link{
+    color: rgba(0, 0, 0, 0.349) !important; /* Para sobreescribrir al bootstrap y poder modificar la opacidad y animar la fuente */
+    transition: all 0.5s;
+}
+
+.nav-item:hover .nav-link{
+    color: rgb(0, 0, 0) !important; /* Para sobreescribrir al bootstrap y poder modificar la opacidad y animar la fuente */
+    transition: all 0.5s;
+}
+
+.navbar-nav:hover .active{
+    color: rgba(0, 0, 0, 0.349) !important; /*Animaciones con Nav-link Active*/
+}
+
+
+
+.active{
+    color: rgb(0, 0, 0) !important; /*Reestablecer Color Negro en los Nav-links active's */
+}
+
+.nav-item .active:hover{
+    color: rgb(0, 0, 0) !important; /*Animaciones con Nav-link Active*/
+}
+
+.navbar-toggler{
+    color: black;
+}
