@@ -1,8 +1,8 @@
+
 footer{
     grid-area: pie;
     margin-top: 100px;
-    display: flex;
-    justify-content: space-between;
+    @include flexbox(row, space-between, stretch);
 }
 
 .footer__lista{
@@ -29,7 +29,7 @@ footer{
 .footer__texto{
     position: absolute;
     text-align: left;
-    font-family: Verdana, Geneva, Tahoma, sans-serif ;
+    font-family: $fuente;
     padding-top: 2%;
     padding-left: 2%;
 }

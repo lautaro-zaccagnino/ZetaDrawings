@@ -1,3 +1,59 @@
+h1, h2, h3 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center; }
+
+a {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-decoration: none;
+  color: #252525;
+  font-size: x-large; }
+
+/*BODY */
+body {
+  background-image: url(/imagenes/fondo.jpg); }
+
+main {
+  grid-area: principal;
+  margin-top: 200px;
+  text-align: center;
+  background-color: #9da6b3;
+  border: 3px solid grey;
+  padding-bottom: 20px; }
+
+#tamanio {
+  width: 70vw; }
+
+aside {
+  grid-area: costado;
+  text-align: center;
+  margin-top: 500px;
+  border: 3px solid grey;
+  height: 670px;
+  width: 225px;
+  background-color: #9da6b3; }
+
+body {
+  display: grid;
+  grid-template-areas: "cabecera cabecera cabecera cabecera cabecera" ". principal . costado . " "pie pie pie pie pie"; }
+
+/*ENCABEZADOS*/
+h1 {
+  font-size: 32px;
+  font-weight: 900;
+  padding-top: 30px;
+  padding-bottom: 50px; }
+
+h2 {
+  font-weight: 500;
+  margin: 30px;
+  margin-top: 60px; }
+
+h3 {
+  font-weight: 500;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: large; }
+
 /* Header */
 header {
   grid-area: cabecera;
@@ -41,7 +97,9 @@ footer {
   grid-area: pie;
   margin-top: 100px;
   display: flex;
-  justify-content: space-between; }
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch; }
 
 .footer__lista {
   background-color: rgba(108, 150, 199, 0.836);
@@ -65,6 +123,120 @@ footer {
   padding-top: 2%;
   padding-left: 2%; }
 
+.carousel-item {
+  pointer-events: none; }
+
+.ult__dibujos {
+  display: inline;
+  height: 300px;
+  width: 200px;
+  pointer-events: none; }
+
+.encargo__contacto {
+  transition: all .5s;
+  color: #5f5f5f; }
+
+.encargo__contacto:hover {
+  color: black;
+  transition: all .5s; }
+
+.encargo__consulta {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding-top: 30px;
+  padding-bottom: 40px; }
+
+.imagenes__imagen {
+  display: flex;
+  height: 600px;
+  width: 400px;
+  object-fit: cover;
+  transition: all 0.4s;
+  z-index: 0; }
+
+.imagenes__imagen:hover {
+  transform: scale(1.15);
+  transition: all 0.4s;
+  z-index: 1; }
+
+.imagenes__coleccion {
+  margin-top: 30px;
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  overflow-x: none; }
+
+.coleccion__fuente {
+  font-family: Verdana, Geneva, Tahoma, sans-serif; }
+
+.logos__chicos {
+  height: 60px; }
+
+.cartas {
+  flex-wrap: wrap;
+  padding-top: 50px;
+  padding-bottom: 70px; }
+
+.card {
+  transition: all .5s; }
+
+.card:hover {
+  box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.521);
+  transition: all .5s; }
+
+.cont__videos {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  overflow-x: hidden; }
+
+.videos {
+  height: 366px;
+  width: 650px;
+  padding-bottom: 10px;
+  padding-right: 10px; }
+
+.logo__youtube {
+  padding-top: 40px;
+  padding-bottom: 20px;
+  height: 130px;
+  transition: all .5s; }
+
+.logo__youtube:hover {
+  transform: scale(1.25);
+  transition: all .5s; }
+
+.sobreMi {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: stretch;
+  overflow-x: hidden;
+  flex-wrap: wrap;
+  padding-top: 50px;
+  width: 98vw; }
+
+.fotoMia {
+  display: flex;
+  height: 500px; }
+
+.textoSobreMi {
+  width: 50vw;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: larger;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  line-height: 35px;
+  padding-bottom: 70px; }
+
+.contacto__directo {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding-top: 20px; }
+
 .tabla__div {
   display: flex;
   justify-content: center; }
@@ -80,4 +252,52 @@ footer {
 .info {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   align-items: center; }
+
+@media only screen and (max-width: 768px) {
+  #tamanio {
+    width: 95vw; }
+  aside {
+    margin-top: 100px; }
+  .imagenes__display {
+    grid-template-rows: 500px;
+    width: 90vw; }
+  .imagenes__imagen {
+    height: 500px; }
+  body {
+    display: grid;
+    grid-template-areas: "cabecera cabecera cabecera cabecera cabecera" ". principal principal principal ." ". . costado . ." "pie pie pie pie pie"; }
+  .videos {
+    height: 266px;
+    width: 350px;
+    padding-bottom: 10px;
+    padding-right: 10px; }
+  .sobreMi {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center; }
+  .fotoMia {
+    width: 300px;
+    height: 450px; } }
+
+@media only screen and (min-width: 1600px) {
+  #tamanio {
+    width: 1120px; } }
+
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #3c77b9 #ffffff00; }
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 17px; }
+
+*::-webkit-scrollbar-track {
+  background: #ffffff00; }
+
+*::-webkit-scrollbar-thumb {
+  background-color: #3c77b9;
+  border-radius: 33px;
+  border: 26px outset #ffffff00; }

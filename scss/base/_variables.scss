@@ -1,1 +1,24 @@
+
+
 $color-principal: rgba(108, 150, 199, 0.836);
+$fuente: Verdana, Geneva, Tahoma, sans-serif;
+
+
+%fuenteHeaders{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+
+$peso:(
+    h1peso: 900,
+    h2peso: 500,
+    h3peso: 500,
+    h4peso: 500,
+);
+
+@mixin flexbox($direction, $justify, $align){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}

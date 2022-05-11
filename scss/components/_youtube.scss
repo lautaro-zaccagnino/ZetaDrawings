@@ -1,0 +1,27 @@
+
+.cont__videos{
+    @include flexbox(row, center, stretch);
+    flex-wrap: wrap;
+    overflow-x: hidden;
+}
+
+
+.videos{
+    height: 366px;
+    width: 650px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+}
+
+
+.logo__youtube{
+    padding-top: 40px;
+    padding-bottom: 20px;
+    height:130px;
+    transition: all .5s;
+}
+
+.logo__youtube:hover{
+    transform: scale(1.25);
+    transition: all .5s;
+}

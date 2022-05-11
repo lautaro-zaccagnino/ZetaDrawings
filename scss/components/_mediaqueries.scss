@@ -1,0 +1,44 @@
+
+@media only screen and (max-width: 768px) {
+    #tamanio{
+        width: 95vw;
+    }
+    aside{
+        margin-top: 100px;
+    }
+    .imagenes__display{
+        grid-template-rows: 500px;
+        width: 90vw;
+    }
+    .imagenes__imagen{
+        height: 500px;
+    }
+    body{
+        display: grid;
+        grid-template-areas:
+            "cabecera cabecera cabecera cabecera cabecera"
+            ". principal principal principal ."
+            ". . costado . ."
+            "pie pie pie pie pie"
+        ;
+    }
+    .videos{
+        height: 266px;
+        width: 350px;
+        padding-bottom: 10px;
+        padding-right: 10px;
+    }
+    .sobreMi{
+        @include flexbox(column, space-around, center);
+    }
+    .fotoMia{
+        width: 300px;
+        height: 450px;
+    }
+}
+
+@media only screen and (min-width: 1600px){
+    #tamanio{
+        width: 1120px;
+    }
+}

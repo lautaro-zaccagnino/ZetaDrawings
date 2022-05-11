@@ -1,0 +1,24 @@
+
+.sobreMi{
+    @include flexbox(row, space-around, stretch);
+    overflow-x: hidden;
+    flex-wrap: wrap;
+    padding-top: 50px;
+    width: 98vw;
+}
+
+.fotoMia{
+    display: flex;
+    height: 500px;
+}
+
+.textoSobreMi{
+    width: 50vw;
+    font-family: $fuente;
+    font-size: larger;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    line-height: 35px;
+    padding-bottom: 70px;
+}

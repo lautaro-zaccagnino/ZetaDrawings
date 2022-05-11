@@ -1,0 +1,29 @@
+
+
+.carousel-item{
+    pointer-events: none;
+}
+
+
+.ult__dibujos{
+    display: inline;
+    height: 300px;
+    width: 200px;
+    pointer-events: none;
+}
+
+.encargo__contacto{
+    transition: all .5s;
+    color: rgb(95, 95, 95);
+}
+
+.encargo__contacto:hover{
+    color: rgb(0, 0, 0);
+    transition: all .5s;
+}
+
+.encargo__consulta{
+    font-family: $fuente;
+    padding-top: 30px;
+    padding-bottom: 40px;
+}

@@ -1,0 +1,44 @@
+
+.imagenes__imagen{
+    display: flex;
+    height: 600px;
+    width: 400px;
+    object-fit: cover;
+    transition: all 0.4s;
+    z-index: 0;
+}
+
+.imagenes__imagen:hover{
+    transform: scale(1.15);
+    transition: all 0.4s;
+    z-index: 1;
+}
+
+.imagenes__coleccion{
+    margin-top: 30px;
+    flex-wrap: wrap;
+    @include flexbox(row, center, stretch);
+    overflow-x: none;
+}
+
+.coleccion__fuente{
+    font-family: $fuente;
+}
+
+.logos__chicos{
+    height: 60px;
+}
+
+.cartas{
+    flex-wrap: wrap;
+    padding-top:50px;
+    padding-bottom: 70px;
+}
+
+.card{
+    transition: all .5s;
+}
+.card:hover{
+    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.521);
+    transition: all .5s;
+}

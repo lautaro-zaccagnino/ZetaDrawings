@@ -1,0 +1,70 @@
+a{
+    font-family: $fuente;
+    text-decoration: none;
+    color: rgb(37, 37, 37);
+    font-size: x-large;
+}
+
+/*BODY */
+
+body{
+    background-image: url(/imagenes/fondo.jpg);
+}
+
+main{
+    grid-area: principal;
+    margin-top: 200px;
+    text-align: center;
+    background-color: rgb(157, 166, 179);
+    border: 3px solid grey;
+    padding-bottom: 20px;
+}
+
+#tamanio{
+    width: 70vw;
+}
+
+aside{
+    grid-area: costado;
+    text-align: center;
+    margin-top: 500px;
+    border: 3px solid grey;
+    height: 670px;
+    width: 225px;
+    background-color: rgb(157, 166, 179);
+}
+
+
+body{
+    display: grid;
+    grid-template-areas:
+        "cabecera cabecera cabecera cabecera cabecera"
+        ". principal . costado . "
+        "pie pie pie pie pie"
+    ;
+}
+
+/*ENCABEZADOS*/
+
+h1{
+    @extend %fuenteHeaders; 
+    font-size: 32px;
+    font-weight: map-get($peso , h1peso ); //MAPS
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+
+h2{
+    @extend %fuenteHeaders;
+    font-weight: map-get($peso , h2peso ); //MAPS
+    margin: 30px;
+    margin-top: 60px;
+}
+h3{
+    @extend %fuenteHeaders;
+    font-weight: map-get($peso , h3peso );  //MAPS
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: large;
+    
+}
