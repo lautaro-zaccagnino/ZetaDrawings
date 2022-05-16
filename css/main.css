@@ -221,7 +221,8 @@ footer {
 
 .fotoMia {
   display: flex;
-  height: 500px; }
+  height: 500px;
+  border: 10px solid #ceb87b; }
 
 .textoSobreMi {
   width: 50vw;
