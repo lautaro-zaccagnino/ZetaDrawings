@@ -303,6 +303,24 @@ footer {
   border-radius: 33px;
   border: 26px outset #ffffff00; }
 
+.carrito {
+  position: absolute;
+  top: 15px;
+  left: 150px; }
+  .carrito img {
+    width: 35px; }
+
+.contador {
+  padding-left: 1px;
+  padding-right: 2px;
+  position: absolute;
+  font-size: 16px;
+  top: 15px;
+  left: 190px;
+  background-color: red;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border-radius: 10px; }
+
 .tiendaMain {
   display: flex;
   flex-direction: column;
@@ -332,7 +350,8 @@ footer {
     object-fit: scale-down;
     width: 300px;
     height: 300px;
-    border-bottom: 1px #a1a1a1 solid; }
+    border-bottom: 1px #a1a1a1 solid;
+    pointer-events: none; }
   .objeto a {
     font-size: 20px;
     padding-bottom: 10px; }
@@ -347,7 +366,7 @@ footer {
     align-items: center;
     width: 100%; } }
 
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 768px) {
   .tiendaMain {
     width: 100%; }
     .tiendaMain h1 {
@@ -358,3 +377,27 @@ footer {
     justify-content: center;
     align-items: center;
     width: 320px; } }
+
+.compras {
+  width: 120%;
+  height: 1200px; }
+
+.datos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: start; }
+  .datos h2 {
+    font-size: 25px; }
+  .datos input {
+    width: 500px;
+    height: 40px;
+    margin-bottom: 30px; }
+
+.dibujosCantidad {
+  width: 200px;
+  display: flex;
+  flex-direction: column; }
+  .dibujosCantidad h3 {
+    text-align: left; }
