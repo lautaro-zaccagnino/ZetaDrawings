@@ -70,12 +70,26 @@
             <h2>Dibujos</h2>
 
             <div class="dibujosCantidad"> <!-- POSPUESTO PARA ARRAYS -->
-                <h3>Liv Talyor: </h3>
-                <h3>Charly García: </h3>
-                <h3>Konan: </h3>
-                <h3>Daenerys: </h3>
-                <h3>Caballo Facherito: </h3>
-                <h3>Yuno: </h3>
+                <h3>Liv Taylor: <span id="livTaylor"></span> <input type="button" value="-" class="sumaResta" onclick="restarAlCarrito(0); window.location.reload()"> <input type="button" value="+" class="sumaResta" onclick="agregarAlCarrito(0); window.location.reload()"> </h3>
+
+                <h3>Charly García: <span id="charly"></span> <input type="button" value="-" class="sumaResta"  onclick="restarAlCarrito(1); window.location.reload()"> <input type="button" value="+" class="sumaResta" onclick="agregarAlCarrito(1); window.location.reload()"> </h3>
+
+                <h3>Konan: <span id="konan"></span> <input type="button" value="-" class="sumaResta"  onclick="restarAlCarrito(2); window.location.reload()"> <input type="button" value="+" class="sumaResta" onclick="agregarAlCarrito(2); window.location.reload()"> </h3>
+
+                <h3>Daenerys: <span id="daenerys"></span> <input type="button" value="-" class="sumaResta"  onclick="restarAlCarrito(3); window.location.reload()"> <input type="button" value="+" class="sumaResta" onclick="agregarAlCarrito(3); window.location.reload()"> </h3>
+                
+                <h3>Caballo Facherito: <span id="caballo"></span> <input type="button" value="-" class="sumaResta"  onclick="restarAlCarrito(4); window.location.reload()"> <input type="button" value="+" class="sumaResta" onclick="agregarAlCarrito(4); window.location.reload()"> </h3>
+
+                <h3>Yuno: <span id="yuno"></span> <input type="button" value="-" class="sumaResta"  onclick="restarAlCarrito(5); window.location.reload()"> <input type="button" value="+" class="sumaResta" onclick="agregarAlCarrito(5); window.location.reload()"> </h3>
+
+                <script>
+                  document.getElementById('livTaylor').innerHTML = clasificador[0];
+                  document.getElementById('charly').innerHTML = clasificador[1];
+                  document.getElementById('konan').innerHTML = clasificador[2];
+                  document.getElementById('daenerys').innerHTML = clasificador[3];
+                  document.getElementById('caballo').innerHTML = clasificador[4];
+                  document.getElementById('yuno').innerHTML = clasificador[5];
+                </script>
             </div>
 
 

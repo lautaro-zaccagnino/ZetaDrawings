@@ -380,7 +380,7 @@ footer {
 
 .compras {
   width: 120%;
-  height: 1200px; }
+  height: 1600px; }
 
 .datos {
   display: flex;
@@ -396,8 +396,12 @@ footer {
     margin-bottom: 30px; }
 
 .dibujosCantidad {
-  width: 200px;
+  width: 300px;
   display: flex;
   flex-direction: column; }
   .dibujosCantidad h3 {
     text-align: left; }
+
+.sumaResta {
+  width: 32px !important;
+  height: 32px !important; }

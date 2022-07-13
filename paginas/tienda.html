@@ -16,7 +16,6 @@
     <link rel="stylesheet" href="../css/main.css">
 
     <script src="../js/main.js"></script>
-    <script src="../js/secondary.js"></script>
     <title>Zeta Drawings | Tienda</title>
 </head>
 
@@ -73,38 +72,56 @@
 
     <main  class="tiendaMain">
         
-        <h1>Dibujos a la Venta - $2.500 <br> 10 unidades máximo</h1>
+        <h1>Dibujos a la Venta - $2.500 c/u</h1>
 
         <div class="articulos">
 
             <div class="card objeto">
                 <img src="../imagenes/Liv Taylor.jpg">
-                <a onclick="agregarAlCarrito(1); window.location.reload()">Sumar al carrito</a>
+                <a onclick="agregarAlCarrito(0); window.location.reload()"> (<span id="stockLiv"></span> en stock) Sumar al carrito </a>
+                <script>
+                    document.getElementById('stockLiv').innerHTML = stockDibujos[0];
+                </script>
             </div>
     
             <div class="card objeto">
                 <img src="../imagenes/Charly.jpg">
-                <a onclick="agregarAlCarrito(1); window.location.reload()">Sumar al carrito</a>
+                <a onclick="agregarAlCarrito(1); window.location.reload()"> (<span id="stockCharly"></span> en stock) Sumar al carrito </a>
+                <script>
+                    document.getElementById('stockCharly').innerHTML = stockDibujos[1];
+                </script>
             </div >
     
             <div class="card objeto">
                 <img src="../imagenes/Konan.jpg">
-                <a onclick="agregarAlCarrito(1); window.location.reload()">Sumar al carrito</a>
+                <a onclick="agregarAlCarrito(2); window.location.reload()"> (<span id="stockKonan"></span> en stock) Sumar al carrito </a>
+                <script>
+                    document.getElementById('stockKonan').innerHTML = stockDibujos[2];
+                </script>
             </div>
 
             <div class="card objeto">
                 <img src="../imagenes/emiliadraw.jpg">
-                <a onclick="agregarAlCarrito(1); window.location.reload()">Sumar al carrito</a>
+                <a onclick="agregarAlCarrito(3); window.location.reload()"> (<span id="stockEmilia"></span> en stock) Sumar al carrito </a>
+                <script>
+                    document.getElementById('stockEmilia').innerHTML = stockDibujos[3];
+                </script>
             </div>
     
             <div class="card objeto">
                 <img src="../imagenes/caballo.jpg">
-                <a onclick="agregarAlCarrito(1); window.location.reload()">Sumar al carrito</a>
+                <a onclick="agregarAlCarrito(4); window.location.reload()"> (<span id="stockCaballo"></span> en stock) Sumar al carrito </a>
+                <script>
+                    document.getElementById('stockCaballo').innerHTML = stockDibujos[4];
+                </script>
             </div >
     
             <div class="card objeto">
                 <img src="../imagenes/yuno.jpg">
-                <a onclick="agregarAlCarrito(1); window.location.reload()">Sumar al carrito</a>
+                <a onclick="agregarAlCarrito(5); window.location.reload()"> (<span id="stockYuno"></span> en stock) Sumar al carrito </a>
+                <script>
+                    document.getElementById('stockYuno').innerHTML = stockDibujos[5];
+                </script>
             </div>
 
         </div>
