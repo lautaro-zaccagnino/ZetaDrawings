@@ -23,6 +23,20 @@ if(localStorage.getItem("guardadoCarrito") > 0){
     }
 }
 
+function cantidadAlCarrito(idCarrito) {
+    let cantidad;
+    do{
+        cantidad = prompt("¿Qué cantidad quiere agregar al carrito?\n(Solo números mayores que cero)");
+    }while(isNaN(cantidad) || cantidad < 1);
+
+    if(cantidad > stockDibujos[idCarrito]){
+        alert("¡Lo lamentamos! No tenemos suficiente stock para completar la compra.")
+    }else{
+        for(let i=0; i < cantidad; i++){
+            agregarAlCarrito(idCarrito);
+        }
+    }
+}
 
 function agregarAlCarrito(idCarrito){
     if(stockDibujos[idCarrito] > 0){
@@ -37,7 +51,7 @@ function agregarAlCarrito(idCarrito){
         localStorage.setItem("guardadoClasificador", JSON.stringify(clasificador)); //Guarda los valores de los arrays "originales" a los "de guardado"
         localStorage.setItem("guardadoStockDibujos", JSON.stringify(stockDibujos));
     }else{
-        console.log("No hay más stock");
+        alert("¡Lo lamentamos! No nos queda más stock del dibujo solicitado.");
     }
 
 }
@@ -67,16 +81,6 @@ function multiplicar(cantidad){  //Esta función no tiene sentido, bien se podr�
 
     return precio;
 }
-
-/* function dividir(cantidad){
-    let precio=0;
-    
-    for(let i=cantidad; i===0;i--){
-        precio -= 2500;
-    }
-
-    return precio;
-} */
 
 console.log(totalCarrito);
 console.log(precio);
@@ -165,3 +169,14 @@ function borarrProductoDelCarrito(producto){
 }
 
 borarrProductoDelCarrito(1); */
+
+/* const productos = ["Zapas", "Remeras", "Ojotas"];
+
+let cards="";
+
+productos.forEach( (producto)=>{   // Muestra cada producto del array
+    console.log(producto);
+    cards += producto;  // Genera una card por cada PRODUCTO
+})
+
+document.write(cards); */ //CLASE 6
