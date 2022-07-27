@@ -25,10 +25,14 @@ if(localStorage.getItem("guardadoCarrito") > 0){
 
 function cantidadAlCarrito(idCarrito) {
     let cantidad;
-    do{
-        cantidad = prompt("¿Qué cantidad quiere agregar al carrito?\n(Solo números mayores que cero)");
-    }while(isNaN(cantidad) || cantidad < 1);
-
+    if(stockDibujos[idCarrito] > 0){
+        do{
+            cantidad = prompt("¿Qué cantidad quiere agregar al carrito?\n(Solo números mayores que cero)");
+        }while(isNaN(cantidad) || cantidad < 1);        
+    }else{
+        alert("¡Lo lamentamos! No tenemos stock.");
+    }
+        
     if(cantidad > stockDibujos[idCarrito]){
         alert("¡Lo lamentamos! No tenemos suficiente stock para completar la compra.")
     }else{
