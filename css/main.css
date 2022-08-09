@@ -353,8 +353,13 @@ footer {
     border-bottom: 1px #a1a1a1 solid;
     pointer-events: none; }
   .objeto a {
-    font-size: 20px;
-    padding-bottom: 10px; }
+    background-color: #0084ff;
+    text-align: center;
+    border: 2px solid white;
+    border-radius: 5px;
+    font-size: 18px;
+    color: white !important;
+    padding: 5px; }
 
 @media only screen and (max-width: 1024px) {
   .tiendaMain {
@@ -380,17 +385,18 @@ footer {
 
 .compras {
   width: 120%;
-  height: 1600px; }
+  height: 900px; }
 
 .datos {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   text-align: start; }
   .datos h2 {
     font-size: 25px; }
   .datos input {
+    justify-items: right;
     width: 500px;
     height: 40px;
     margin-bottom: 30px; }
@@ -398,10 +404,34 @@ footer {
 .dibujosCantidad {
   width: 300px;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  justify-content: space-between; }
   .dibujosCantidad h3 {
     text-align: left; }
 
 .sumaResta {
   width: 32px !important;
   height: 32px !important; }
+
+input {
+  border-radius: 5px;
+  border: 1px solid #bdbdbd; }
+
+#btnCompra {
+  background-color: #0084ff;
+  color: white;
+  border: 2px solid #bdbdbd; }
+
+#btnReinicio {
+  background-color: #bd3535;
+  color: white;
+  border: 2px solid #bdbdbd; }
+
+.datosCarrito {
+  display: flex;
+  flex-direction: column;
+  background-color: #8d8d8d;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 10px;
+  margin-left: 100px; }

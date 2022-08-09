@@ -67,9 +67,9 @@
         <h1>Carrito de Compras</h1>
 
         <div class="datos">
-            <h2>Dibujos</h2>
-
-            <div class="dibujosCantidad"> <!-- POSPUESTO PARA ARRAYS -->
+          
+          <div class="dibujosCantidad">
+              <h2>Dibujos</h2>
                 <h3>Liv Taylor: <span id="livTaylor"></span> <input type="button" value="-" class="sumaResta" onclick="restarAlCarrito(0); window.location.reload()"> <input type="button" value="+" class="sumaResta" onclick="agregarAlCarrito(0); window.location.reload()"> </h3>
 
                 <h3>Charly García: <span id="charly"></span> <input type="button" value="-" class="sumaResta"  onclick="restarAlCarrito(1); window.location.reload()"> <input type="button" value="+" class="sumaResta" onclick="agregarAlCarrito(1); window.location.reload()"> </h3>
@@ -93,23 +93,26 @@
             </div>
 
 
-            <h2>Cantidad de dibujos a comprar: <span id="cantidadCarrito"></span></h2>
             
-            <h3>Precio: $<span id="precioTotal"></span></h3>
-            
-            <script>
-                document.getElementById('cantidadCarrito').innerHTML = totalCarrito;
-                document.getElementById('precioTotal').innerHTML = precio;
-            </script>
+            <div class="datosCarrito">
+              <h2>Cantidad de dibujos a comprar: <span id="cantidadCarrito"></span></h2>
+              <h3>Precio: $<span id="precioTotal"></span></h3>
+              
+              <script>
+                  document.getElementById('cantidadCarrito').innerHTML = totalCarrito;
+                  document.getElementById('precioTotal').innerHTML = precio;
+              </script>
+  
+  
+              <input type="text" value="Alguna Persona" placeholder="Nombre">
+              <input type="text" value="Calle incógnita 2013" placeholder="Dirección">
+              <input type="text" value="1111-2222-3333-4444" placeholder="Número de tarjeta">
+              <input type="text" value="8/29" placeholder="Fecha de vencimiento">
+              <input type="text" value="123" placeholder="Código de seguridad">
+              <input type="button" id="btnCompra" value="Comprar" onclick="compraste(); window.location.reload()">
+              <input type="button" id="btnReinicio" value="Limpiar Carrito" onclick="limpiarCarrito(); window.location.reload()">
+            </div>
 
-
-            <input type="text" value="Alguna Persona" placeholder="Nombre">
-            <input type="text" value="Calle incógnita 2013" placeholder="Dirección">
-            <input type="text" value="1111-2222-3333-4444" placeholder="Número de tarjeta">
-            <input type="text" value="8/29" placeholder="Fecha de vencimiento">
-            <input type="text" value="123" placeholder="Código de seguridad">
-            <input type="button" value="Comprar" onclick="compraste(); window.location.reload()">
-            <input type="button" value="Limpiar Carrito" onclick="limpiarCarrito(); window.location.reload()">
         </div>
 
     </main>

@@ -27,8 +27,8 @@ function cantidadAlCarrito(idCarrito) {
     let cantidad;
     if(stockDibujos[idCarrito] > 0){
         do{
-            cantidad = prompt("¿Qué cantidad quiere agregar al carrito?\n(Solo números mayores que cero)");
-        }while(isNaN(cantidad) || cantidad < 1);        
+            cantidad = prompt("¿Qué cantidad quiere agregar al carrito?\n('Cero' para cancelar)");
+        }while(isNaN(cantidad) || cantidad < 0);        
     }else{
         alert("¡Lo lamentamos! No tenemos stock.");
     }
@@ -90,23 +90,27 @@ console.log(totalCarrito);
 console.log(precio);
 
 function limpiarCarrito(){
-    alert("Se reinició el carrito");
-    totalCarrito=0;
-    for(let i=0; i < clasificador.length; i++){
-        clasificador[i] = 0;
-    }
-    localStorage.setItem('guardadoCarrito', totalCarrito);
-    localStorage.setItem('guardadoClasificador', clasificador[idCarrito]);
+    if(totalCarrito > 0){
+        alert("Se reinició el carrito");
+        totalCarrito=0;
+        for(let i=0; i < clasificador.length; i++){
+            clasificador[i] = 0;
+        }
+        localStorage.setItem('guardadoCarrito', totalCarrito);
+        localStorage.setItem('guardadoClasificador', clasificador[idCarrito]);
+    } else alert("No hay elementos en el carrito.");
 }
 
 function compraste(){
-    alert("¡¡Felicidades!! Se realizó tu compra :) \n (Se reinicia el carrito)");
-    totalCarrito=0;
-    for(let i=0; i < clasificador.length; i++){
-        clasificador[i] = 0;
-    }
-    localStorage.setItem('guardadoCarrito', totalCarrito);
-    localStorage.setItem('guardadoClasificador', clasificador[idCarrito]);
+    if(totalCarrito > 0){
+        alert("¡¡Felicidades!! Se realizó tu compra :) \n (Se reinicia el carrito)");
+        totalCarrito=0;
+        for(let i=0; i < clasificador.length; i++){
+            clasificador[i] = 0;
+        }
+        localStorage.setItem('guardadoCarrito', totalCarrito);
+        localStorage.setItem('guardadoClasificador', clasificador[idCarrito]);
+    } else alert("No hay elementos en el carrito.");
 }
 
 
