@@ -8,15 +8,17 @@ const clasificador=[0,0,0,0,0,0] //Arrays "originales"
 const stockDibujos=[3,4,2,1,5,6]
 
 const guardadoClasificador=[0,0,0,0,0,0] //Arrays "de guardado"
-const guardadoStockDibujos=[...stockDibujos]
+const guardadoStockDibujos=[...stockDibujos]                        //SPREAD ARRAY
 
 
 if(localStorage.getItem("guardadoCarrito") > 0){
+    const [a,b,c,d,e,f] = guardadoStockDibujos; //Prueba de DESESTRUCTURACION EN ARRAYS 
     totalCarrito=localStorage.getItem("guardadoCarrito");
     precio=localStorage.getItem("guardadoPrecio");
     let auxClasificador = JSON.parse(localStorage.getItem("guardadoClasificador")); //Auxiliar para poder devolver valores a los arrays "originales"
     let auxStockDibujos = JSON.parse(localStorage.getItem("guardadoStockDibujos"));
-    console.log(guardadoStockDibujos);
+    console.log(a,b,c);                                                          //Prueba de DESESTRUCTURACION EN ARRAYS 
+    console.log(d,e,f);                                                          //Prueba de DESESTRUCTURACION EN ARRAYS             
     for(let i=0; i < auxClasificador.length; i++) { //Asigna los valores de los aux a los arrays "originales"
         clasificador[i] = auxClasificador[i];
         stockDibujos[i] = auxStockDibujos[i];
@@ -102,6 +104,7 @@ function limpiarCarrito(){
 }
 
 function compraste(){
+    let volverTienda;
     if(totalCarrito > 0){
         alert("¡¡Felicidades!! Se realizó tu compra :) \n (Se reinicia el carrito)");
         totalCarrito=0;
@@ -110,6 +113,13 @@ function compraste(){
         }
         localStorage.setItem('guardadoCarrito', totalCarrito);
         localStorage.setItem('guardadoClasificador', clasificador[idCarrito]);
+        do{
+            volverTienda = prompt("¿Desea volver a la tienda?\n       (SI   |    NO)");
+            volverTienda = volverTienda.toUpperCase();
+        }while(volverTienda != "SI" && volverTienda != "NO");  
+
+        volverTienda === "SI" ? window.open("./tienda.html") : window.open("./gracias.html");       //OPERADOR TERNARIO
+
     } else alert("No hay elementos en el carrito.");
 }
 
