@@ -25,25 +25,6 @@ if(localStorage.getItem("guardadoCarrito") > 0){
     }
 }
 
-function cantidadAlCarrito(idCarrito) {
-    let cantidad;
-    if(stockDibujos[idCarrito] > 0){
-        do{
-            cantidad = prompt("¿Qué cantidad quiere agregar al carrito?\n('Cero' para cancelar)");
-        }while(isNaN(cantidad) || cantidad < 0);        
-    }else{
-        alert("¡Lo lamentamos! No tenemos stock.");
-    }
-        
-    if(cantidad > stockDibujos[idCarrito]){
-        alert("¡Lo lamentamos! No tenemos suficiente stock para completar la compra.")
-    }else{
-        for(let i=0; i < cantidad; i++){
-            agregarAlCarrito(idCarrito);
-        }
-    }
-}
-
 function agregarAlCarrito(idCarrito){
     if(stockDibujos[idCarrito] > 0){
         console.log(stockDibujos[idCarrito])
@@ -56,8 +37,27 @@ function agregarAlCarrito(idCarrito){
         localStorage.setItem('guardadoPrecio', precio);
         localStorage.setItem("guardadoClasificador", JSON.stringify(clasificador)); //Guarda los valores de los arrays "originales" a los "de guardado"
         localStorage.setItem("guardadoStockDibujos", JSON.stringify(stockDibujos));
+        
+        Toastify({
+            text: "Se agregó al carrito",
+            duration: 750,
+            offset: {
+                x: 50, // horizontal axis - can be a number or a string indicating unity. eg: '2em'
+                y: 10 // vertical axis - can be a number or a string indicating unity. eg: '2em'
+              },
+            
+            }).showToast();
+        
+        setTimeout(() => {
+            location.reload();
+
+        }, 500);
+            
     }else{
-        alert("¡Lo lamentamos! No nos queda más stock del dibujo solicitado.");
+        swal("Error","No tenemos más stock", "error")
+        .then(() => {
+            location.reload();
+        });
     }
 
 }
@@ -93,37 +93,73 @@ console.log(precio);
 
 function limpiarCarrito(){
     if(totalCarrito > 0){
-        alert("Se reinició el carrito");
         totalCarrito=0;
         for(let i=0; i < clasificador.length; i++){
             clasificador[i] = 0;
         }
         localStorage.setItem('guardadoCarrito', totalCarrito);
         localStorage.setItem('guardadoClasificador', clasificador[idCarrito]);
-    } else alert("No hay elementos en el carrito.");
+        swal("Éxito","Se reinició el carrito", "success")
+        .then(() => {
+            location.reload();
+        });
+    } else{
+        swal("Error","No hay elementos en el carrito", "error")
+        .then(() => {
+            location.reload();
+        });
+    }
 }
 
 function compraste(){
-    let volverTienda;
     if(totalCarrito > 0){
-        alert("¡¡Felicidades!! Se realizó tu compra :) \n (Se reinicia el carrito)");
         totalCarrito=0;
         for(let i=0; i < clasificador.length; i++){
             clasificador[i] = 0;
         }
         localStorage.setItem('guardadoCarrito', totalCarrito);
         localStorage.setItem('guardadoClasificador', clasificador[idCarrito]);
-        do{
-            volverTienda = prompt("¿Desea volver a la tienda?\n       (SI   |    NO)");
-            volverTienda = volverTienda.toUpperCase();
-        }while(volverTienda != "SI" && volverTienda != "NO");  
+        
+        swal("¡Gracias por tu compra!","¿Deseas volver a la tienda?", "success",{
+            buttons: {
+                cancel: "No",
+                confirm: {
+                    text: "Sí",
+                    value: "confirm",
+                },
+                },
+          })
+        .then((value) =>{
+            switch (value) {
+ 
+                case "confirm":
+                  location.reload();
+                  window.open("./tienda.html");
+                  break;
+             
+                default:
+                  location.reload();
+                  window.open("./gracias.html");
+              }
+        });
 
-        volverTienda === "SI" ? window.open("./tienda.html") : window.open("./gracias.html");       //OPERADOR TERNARIO
+    } else{
+        swal("Error","No hay elementos en el carrito", "error")
+        .then(() => {
+            location.reload();
+        });
+    }
 
-    } else alert("No hay elementos en el carrito.");
 }
 
+/* 
+const dibujosVenta = 
+    {precio: 2500, stock: 6}
+;
 
+let stringVenta = JSON.stringify(dibujosVenta);
+
+document.getElementById("dibujosEnVenta").innerHTML = stringVenta; */
 
 /////////////////////////////////// Clase 4
 
