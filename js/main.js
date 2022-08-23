@@ -3,6 +3,7 @@ let guardadoCarrito=0;
 let precio=0;
 let guardadoPrecio=0;
 let idCarrito;
+let precioDeVenta;
 
 const clasificador=[0,0,0,0,0,0] //Arrays "originales"
 const stockDibujos=[3,4,2,1,5,6]
@@ -69,7 +70,7 @@ function restarAlCarrito(idCarrito){
         clasificador[idCarrito] -= 1;
         console.log(stockDibujos[idCarrito])
         totalCarrito--;
-        precio -= 2500;
+        precio -= precioDeVenta;
         localStorage.setItem('guardadoCarrito', totalCarrito);
         localStorage.setItem('guardadoPrecio', precio);
         localStorage.setItem("guardadoClasificador", JSON.stringify(clasificador)); //Guarda los valores de los arrays "originales" a los "de guardado"
@@ -82,7 +83,7 @@ function multiplicar(cantidad){  //Esta función no tiene sentido, bien se podr�
     let precio=0;
     
     for(let i=0; i<cantidad;i++){
-        precio += 2500;
+        precio += precioDeVenta;
     }
 
     return precio;
@@ -152,85 +153,21 @@ function compraste(){
 
 }
 
-/* 
-const dibujosVenta = 
-    {precio: 2500, stock: 6}
-;
+//////////////////////////////
 
-let stringVenta = JSON.stringify(dibujosVenta);
 
-document.getElementById("dibujosEnVenta").innerHTML = stringVenta; */
-
-/////////////////////////////////// Clase 4
-
-/* function Producto(titulo, stock, precio){   ///Func constructora
-    this.titulo = titulo;
-    this.stock = stock;
-    this.precio = precio;
+const precioDibujos = () => {
+    fetch("../precios.json")
+    .then((response) => response.json())
+    .then(informacion => {
+        let sumador = ``;
+        informacion.forEach((precios) => {
+            sumador += `${precios.precio}
+            `
+        })
+        precioDeVenta = parseInt(sumador);
+        document.getElementById("dolarPrecio").innerHTML = precioDeVenta;
+    })
 }
 
-const producto1 = new Producto("Remera", 10, 100);
-const producto2 = new Producto("Zapatillas", 20, 200);
-
-
- */
-
-////////////////////////////////////////////////////////////////
-
-/* function Auto(marcaParametro, modeloParametro){
-    this.marca = marcaParametro;
-    this.modelo = modeloParametro;
-}
-
-
-const miPrimerAuto = new Auto("Ferrari", 1947); /// Objeto literal
-
-const producto = {marca: 10, modelo: 900}
-
- */
-
-/////////////////////////////////////////////////////////////
-
-/* function Auto(objetoDelAuto){
-    this.marca = objetoDelAuto.marca;
-    this.modelo = objetoDelAuto.modelo;
-}
-
-const auto = {
-    marca: "ferrari",
-    modelo: 1947
-}
-
-const miPrimerAuto = new Auto(auto); */
-
-
-///////////// Clase 5? Agrega objetos al carrito
-
-/* const carrito = [];
-
-function agregarAlCarrito(producto){
-    carrito.push(producto);
-}
-
-agregarAlCarrito({id: 1, name: "Gorra", price: 900})
-agregarAlCarrito({id: 2, name: "Zapatillas", price: 900})
-agregarAlCarrito({id: 3, name: "Remera", price: 900})
-
-function borarrProductoDelCarrito(producto){
-    const index = carrito.findIndex(producto => producto.id === idDelProducto); //IndexOf === findIndex, la diferencia está en que el ultimo es para objetos
-    if(index !== -1){ carrito.splice(index, 1);}
-    console.log(index);
-}
-
-borarrProductoDelCarrito(1); */
-
-/* const productos = ["Zapas", "Remeras", "Ojotas"];
-
-let cards="";
-
-productos.forEach( (producto)=>{   // Muestra cada producto del array
-    console.log(producto);
-    cards += producto;  // Genera una card por cada PRODUCTO
-})
-
-document.write(cards); */ //CLASE 6
+precioDibujos();
