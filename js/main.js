@@ -200,8 +200,6 @@ const precioDibujos = () => {
         })
         precioDeVenta = parseInt(sumador);
         if(document.getElementById("dolarPrecio") !=null)  document.getElementById("dolarPrecio").innerHTML = precioDeVenta;
-
-        if(document.getElementById("precioTotal") !=null) document.getElementById("precioTotal").innerHTML = precioDeVenta;
         
     })
 }
