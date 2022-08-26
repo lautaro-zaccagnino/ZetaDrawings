@@ -336,7 +336,7 @@ footer {
   justify-content: center;
   width: 1000px; }
 
-.objeto {
+.objeto div {
   border: 2px solid #a1a1a1;
   background-color: #b2bcca;
   height: 350px;
@@ -345,14 +345,14 @@ footer {
   flex-direction: column;
   justify-content: space-between;
   align-items: center; }
-  .objeto img {
+  .objeto div img {
     overflow: hidden;
     object-fit: scale-down;
     width: 300px;
     height: 300px;
     border-bottom: 1px #a1a1a1 solid;
     pointer-events: none; }
-  .objeto a {
+  .objeto div a {
     background-color: #0084ff;
     text-align: center;
     border: 2px solid white;
